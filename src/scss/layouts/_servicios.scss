@@ -1,0 +1,121 @@
+@use 'base' as *;
+
+
+
+.servicios {
+    /* Arreglar el tamaño de las columna */
+    .container {
+        @include medium {
+            width: auto;
+        }
+    }
+    
+
+    &__container {
+        @include large {
+           @include grid(2,0);          
+
+        }
+    }
+
+    &__image-container{
+        // border: 1px solid black;
+        background-color: gold; 
+       
+    }
+
+    &__image{       
+        margin-bottom: 60px;
+        display: block;
+        height: 400px;       
+        width: 100%;
+        object-fit: cover;        
+
+        @include medium{
+            height: 600px;
+        }
+
+        @include large {
+            height: 100%;
+            
+        }
+
+        @include xlarge {
+            margin-bottom: 0;
+        }
+    }
+
+    &__contenido {
+        // border: 1px solid black;
+        background-color: #f7f7f7; 
+
+        @include medium {
+            margin: 0 50px;
+        }
+        @include large {
+            margin: 0;
+            padding: 20px 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    &__heading {
+        // border: 1px solid black;
+        @include xlarge {            
+            margin-bottom: 20px;
+        }
+    }
+
+    &__titulo {
+        font-family: $font-primary;
+        margin-bottom: 20px;
+
+        @include large {
+            font-size: 2rem;
+        }
+    }
+
+    &__descripcion {
+        font-weight: 30;
+        margin-bottom: 20px;
+        @include xlarge {
+            margin-right: 80px;
+        }
+    }
+    
+
+    &__body {
+        // border: 1px solid black;
+        @include medium {
+            @include grid(2, 20px)
+        }
+        @include large {
+            display: block;
+        }
+        @include xlarge {
+            @include grid(2, 50px)
+        }
+    }
+
+    &__wrap {
+        // border: 1px solid black;
+        margin-bottom: 20px;
+    }
+
+    &__body-title{
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    &__body-text{
+        font-weight: 300;
+    }
+
+    &__consulta {
+        margin-top: 20px;
+        font-family: $font-primary;
+        font-weight: 300;
+        font-size: .85rem;
+    }
+}

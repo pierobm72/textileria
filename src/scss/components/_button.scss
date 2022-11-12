@@ -1,0 +1,18 @@
+@use 'base/variables' as *;
+
+.button {
+    font-family: $font-secondary;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 8px 25px;
+    border-radius: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $color-secondary;
+    border: 2px solid $color-secondary;
+    transition: 200ms ease-in-out;
+
+   &:hover {
+    opacity: .7;
+   }
+}

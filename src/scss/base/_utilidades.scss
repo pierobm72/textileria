@@ -1,0 +1,19 @@
+@use 'base/mixins' as *;
+.container {
+    margin-right: auto;
+    margin-left: auto;   
+    padding-right: 15px;
+    padding-left: 15px;   
+
+    @include medium {
+        width: 750px;
+    }
+
+    @include large {
+        width: 970px;
+    }
+
+    @include xlarge {
+        width: 1140px;
+    }
+}
