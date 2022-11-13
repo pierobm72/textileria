@@ -16,3 +16,26 @@
     opacity: .7;
    }
 }
+
+
+.button.submit {
+        background-color: #f5ab35;
+        border: none;
+        padding: 10px 25px;
+        color: $color-white;
+        text-transform: uppercase;
+        border-radius: 100px;
+        text-align: center;
+        cursor: pointer;
+        transition: 300ms ease-in-out;
+
+        &:hover {
+           opacity: .8;
+        }
+}
+
+.button.submit.whatsapp {
+    display: inline;
+    background-color: #66b32f;
+   
+}

@@ -1,0 +1,81 @@
+@use 'base' as *;
+
+.contacto {
+    &__contenedor {
+        @include medium {
+            @include grid(2, 10px)
+        }
+    }
+
+    &__contenido {
+        @include medium {
+            padding: 40px ;
+        }
+    }
+
+    &__contenido-titulo {
+        font-size: 1.5rem;
+        font-family: $font-secondary;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &__parrafo {
+        color: $color-secondary;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    &__direccion {
+        color: $color-secondary;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+    &__horario {
+        color: $color-secondary;
+        line-height: 1.5;
+        
+        margin-bottom: 20px;
+    }
+   
+    &__encuentranos {
+        font-size: 1.3rem;
+        font-family: $font-secondary;
+        margin-bottom: 20px;
+    }
+    &__email {
+        color: $color-secondary;
+        text-decoration: underline;
+    }
+
+
+
+    
+}
+
+.formulario {
+    &__contenido {
+        gap: 2rem;
+        padding: 80px 30px;
+        background-color: $bg-gray;
+    }
+
+    &__heading {
+        margin-bottom: 30px;
+    }
+
+    &__consulta {
+        margin-bottom: 30px;
+    }
+    &__campo{
+        margin-bottom:20px;
+    }
+
+    &__input{    
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc !important;
+ 
+     }
+
+    
+}

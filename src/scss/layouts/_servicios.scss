@@ -3,8 +3,9 @@
 
 
 .servicios {
+    margin-bottom: 5rem;
     /* Arreglar el tamaño de las columna */
-    .container {
+    .container {        
         @include medium {
             width: auto;
         }

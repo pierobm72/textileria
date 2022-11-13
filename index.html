@@ -21,18 +21,18 @@
                 <img class="header__logo" src="build/img/asset 0.png" alt="">
             </div>
             <div class="header__links">
-                <a href="#" class="header__link">Nosotros</a>
-                <a href="#" class="header__link">Servicios</a>
-                <a href="#" class="header__link">Galeria</a>
-                <a href="#" class="header__link">Mapa</a>
-                <a href="#" class="header__link">Contacto</a>
+                <a href="#nosotros" class="header__link">Nosotros</a>
+                <a href="#servicios" class="header__link">Servicios</a>
+                <a href="#galeria" class="header__link">Galeria</a>
+                <a href="#mapa" class="header__link">Mapa</a>
+                <a href="#contacto" class="header__link">Contacto</a>
                 <a href="#" class="header__link header__link--button">Cotizaciones</a>
             </div>
         </div>
    </header><!-- Header -->
 
    <!-- Nosotros -->
-   <section class="nosotros">
+   <section class="nosotros" id="nosotros">
     <div class="nosotros__container container">
         <div class="nosotros__contenido">
             <div class="nosotros__titulo-contenido">
@@ -57,8 +57,8 @@
        
     </div>
    </section><!-- Nosotros -->
-
-   <section class="servicios">
+    <!-- Servicios -->
+   <section class="servicios" id="servicios">
     <div class="servicios__container">        
         <picture class="servicios__image-container">
             <img class="servicios__image" src="build/img/servicio_costura.png" alt="">
@@ -88,6 +88,73 @@
             </div>
             <div class="servicios__consulta">>> Consultar por correo o whatsapp la cantidad mínima de producción para cualquiera de los servicios.</div>
        </div>
+    </div>
+   </section><!-- Servicios -->
+
+   <!-- Galeria -->
+   <section class="galeria" id="galeria">
+    <h3 class="galeria__titulo">Galeria</h3>
+    <p class="galeria__subtitulo">Servicios que brindamos</p>
+    <div class="galeria__contenedor">
+        <img class="galeria__imagen" src="build/img/asset 3.png" alt="Galeria imagen">
+        <img class="galeria__imagen" src="build/img/asset 4.png" alt="Galeria imagen">
+        <img class="galeria__imagen" src="build/img/asset 5.png" alt="Galeria imagen">
+        <img class="galeria__imagen" src="build/img/asset 6.png" alt="Galeria imagen">
+        <img class="galeria__imagen" src="build/img/asset 7.png" alt="Galeria imagen">
+        <img class="galeria__imagen" src="build/img/asset 8.png" alt="Galeria imagen">
+    </div>
+   </section><!-- Galeria -->
+
+    <!-- Ubicacion -->
+   <section class="ubicacion" id="mapa">
+    <h3 class="ubicacion__titulo">Ubícanos</h3>
+    <iframe class="ubicacion__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.9639919337674!2d-77.03477297773505!3d-12.045998521857257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8b5d5aa7eb1%3A0x16061e0b481e22aa!2sPlaza%20Mayor%20de%20Lima!5e0!3m2!1ses-419!2spe!4v1668307514332!5m2!1ses-419!2spe" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   </section><!-- Ubicacion -->
+
+   <section class="contacto" id="contacto">
+    <div class="contacto__contenedor container">
+        <div class="contacto__formulario">
+            <div class="formulario">
+                <div class="formulario__contenido">
+                    <h2 class="formulario__heading">Déjanos tu consulta ¡Cotiza Aquí!</h2>
+
+                    <form action="" class="formulario__consulta">
+                        <div class="formulario__campo">
+                            <input  class="formulario__input" placeholder=" * Nombre"></input>
+                        </div>
+                        <div class="formulario__campo">
+                            <input  class="formulario__input" placeholder="* Correo"></input>
+                        </div>
+                        <div class="formulario__campo">
+                           <textarea class="formulario__input" name="" id=""  rows="10"></textarea>
+                        </div>
+                        <input type="submit" class="button submit" value="Enviar consulta">
+                    </form>
+
+                    <a href="#" class="button submit whatsapp">Escribenos al whatsapp</a>
+                </div>               
+            </div>
+        </div>
+        <div class="contacto__contenido">
+            <h3 class="contacto__contenido-titulo">¡Confecciones y acabados de primera!</h3>
+            <p class="contacto__parrafo">Somos TCP, una empresa de confecciones de ropa para damas, caballeros y niños. Elaboramos toda clase de pedidos para empresas y mayoristas. Contamos con más de 20 años de experiencia en la fabricación textil y la venta de ropa al por mayor y menor.</p>
+            <p class="contacto__parrafo">Te asesoramos en la compra de la tela, los colores, la elaboración de los moldes y todo para obtener una buena mercadería.</p>
+
+            <h4 class="contacto__encuentranos">Encuentranos en</h4>
+            <p class="contacto__direccion">Av. Luis Giribaldi 580, La Victoria (Gamarra).<br>
+                Galeria Markata (Semisótano).<br>
+                *Toda visita o renuión es previa cita agendada por correo o whatsapp.</p>
+            <p class="contacto__horario">
+                Horario de atención: De lunes a viernes de 10am a 7pm <br>
+                Sábados de 10am a 4pm
+            </p>
+            <p class="contacto__direccion">
+                Teléfono: 926 837 140
+            </p>
+            <a href ="#" class="contacto__email">info@tallerdeconfeccionesperu.com</a>
+        
+        
+        </div>
     </div>
    </section>
     <!-- JS -->

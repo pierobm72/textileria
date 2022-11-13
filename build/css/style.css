@@ -310,6 +310,10 @@ img {
   max-width: 100%;
 }
 
+iframe {
+  max-width: 100%;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -430,6 +434,8 @@ a {
   font-weight: bold;
 }
 .nosotros__parrafo {
+  font-size: 0.9rem;
+  line-height: 1.5;
   margin-bottom: 20px;
   font-weight: 400;
   color: #707070;
@@ -461,6 +467,7 @@ a {
 }
 
 .servicios {
+  margin-bottom: 5rem;
   /* Arreglar el tamaño de las columna */
 }
 @media (min-width: 768px) {
@@ -576,6 +583,184 @@ a {
   font-size: 0.85rem;
 }
 
+.galeria {
+  margin-bottom: 40px;
+}
+.galeria__titulo {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  .galeria__titulo {
+    font-size: 2rem;
+  }
+}
+.galeria__subtitulo {
+  font-family: "Open Sans", sans-serif;
+  color: #707070;
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .galeria__contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .galeria__contenedor {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+.galeria__imagen {
+  display: block;
+}
+@media (min-width: 768px) {
+  .galeria__imagen:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+  .galeria__imagen:nth-child(2) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .galeria__imagen:nth-child(3) {
+    grid-column: 2/3;
+    grid-row: 2/4;
+  }
+  .galeria__imagen:nth-child(4) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .galeria__imagen:nth-child(5) {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .galeria__imagen:nth-child(6) {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+}
+@media (min-width: 992px) {
+  .galeria__imagen:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+  .galeria__imagen:nth-child(2) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .galeria__imagen:nth-child(3) {
+    grid-column: 3/4;
+    grid-row: 1/3;
+  }
+  .galeria__imagen:nth-child(4) {
+    grid-column: 4/5;
+    grid-row: 1/2;
+  }
+  .galeria__imagen:nth-child(5) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .galeria__imagen:nth-child(6) {
+    grid-column: 4/5;
+    grid-row: 2/3;
+  }
+}
+
+.ubicacion {
+  margin-bottom: 40px;
+}
+.ubicacion__titulo {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 60px;
+}
+@media (min-width: 992px) {
+  .ubicacion__titulo {
+    font-size: 2rem;
+  }
+}
+.ubicacion__mapa {
+  width: 100%;
+  height: 200px;
+}
+@media (min-width: 768px) {
+  .ubicacion__mapa {
+    height: 350px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contacto__contenedor {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .contacto__contenido {
+    padding: 40px;
+  }
+}
+.contacto__contenido-titulo {
+  font-size: 1.5rem;
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contacto__parrafo {
+  color: #707070;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.contacto__direccion {
+  color: #707070;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.contacto__horario {
+  color: #707070;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.contacto__encuentranos {
+  font-size: 1.3rem;
+  font-family: Montserrat, sans-serif;
+  margin-bottom: 20px;
+}
+.contacto__email {
+  color: #707070;
+  text-decoration: underline;
+}
+
+.formulario__contenido {
+  gap: 2rem;
+  padding: 80px 30px;
+  background-color: #f6f6f6;
+}
+.formulario__heading {
+  margin-bottom: 30px;
+}
+.formulario__consulta {
+  margin-bottom: 30px;
+}
+.formulario__campo {
+  margin-bottom: 20px;
+}
+.formulario__input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc !important;
+}
+
 .button {
   font-family: Montserrat, sans-serif;
   font-size: 12px;
@@ -590,4 +775,24 @@ a {
 }
 .button:hover {
   opacity: 0.7;
+}
+
+.button.submit {
+  background-color: #f5ab35;
+  border: none;
+  padding: 10px 25px;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 100px;
+  text-align: center;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+.button.submit:hover {
+  opacity: 0.8;
+}
+
+.button.submit.whatsapp {
+  display: inline;
+  background-color: #66b32f;
 }
