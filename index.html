@@ -4,33 +4,116 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantilla</title>
+    <title>Proyecto Textileria</title>
+
      <!-- Fuentes -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Open+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+     <!-- Swipér -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"  />   
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
     <!-- CSS -->
-    <link rel="stylesheet" href="/build/css/style.css">
+    <link rel="stylesheet" href="build/css/style.css">
+
+   <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
+
 <body>
     <!-- CONTENIDO -->
-    <!-- Header -->
-   <header class="header">
-        <div class="header__container container">
-            <div class="header__logo-container">
-                <img class="header__logo" src="build/img/asset 0.png" alt="">
+    <!-- Header --> 
+
+   <header class="primary-header ">
+    <div class="wrap">
+
+        <div class="img">
+            <img src="build/img/asset 0.png" alt="Logo de pagina" >
+        </div>
+
+        <nav>
+            <ul class="primary-navigation" id="primary-navigation" data-visible="false">             
+                <li>
+                    <a href="#nosotros" class="header__link">Nosotros</a>
+                </li>
+                <li>
+                   <a href="#servicios" class="header__link">Servicios</a>
+                <li>
+                    <a href="#galeria" class="header__link">Galeria</a>
+                </li>                
+                <li>
+                    <a href="#mapa" class="header__link">Mapa</a>
+                </li>
+                <li>
+                    <a href="#contacto" class="header__link">Contacto</a>
+                </li>
+                <li>
+                    <a href="#contacto" class="header__link header__link--button">Cotizaciones</a>
+                </li>
+            </ul>
+        </nav> 
+
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+</header>
+
+   <!-- Carrousel -->
+   <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+        <!-- Slides -->
+            <div class="swiper-slide" style="background:linear-gradient(rgba(15,15,15,0.80), rgba(15,15,15,0.80)), url('build/img/maquina_industrial.jpg')">
+                <h2 class="swiper-title">Calidad y Confianza</h2>
+                <p class="swiper-description"> Te asesorasmos con la compra de la tela, los colores, la elaboración de los moldes y los diseños para obtener una buena mercadería.</p>
+                <div class="swiper-buttons">
+                    <a href="#contacto" class="button white">Cotiza ahora</a>
+                    <a href="#servicios" class="button white">Ver Servicios</a>
+                </div>                             
             </div>
-            <div class="header__links">
-                <a href="#nosotros" class="header__link">Nosotros</a>
-                <a href="#servicios" class="header__link">Servicios</a>
-                <a href="#galeria" class="header__link">Galeria</a>
-                <a href="#mapa" class="header__link">Mapa</a>
-                <a href="#contacto" class="header__link">Contacto</a>
-                <a href="#" class="header__link header__link--button">Cotizaciones</a>
+            <div class="swiper-slide" style="background:linear-gradient(rgba(15,15,15,0.80), rgba(15,15,15,0.80)), url('build/img/costureras.jpg')">
+                <h2 class="swiper-title">TELAS REACTIVAS</h2>
+                <p class="swiper-description"> Trabajamos con telas reactivas que no destiñen para darle al cliente una mejor calidad de la prenda.</p>
+                <div class="swiper-buttons">
+                    <a href="#contacto" class="button white">Cotiza ahora</a>
+                    <a href="#servicios" class="button white">Ver Servicios</a>
+                </div>
+                             
+            </div>
+            <div class="swiper-slide" style="background:linear-gradient(rgba(15,15,15,0.80), rgba(15,15,15,0.80)), url('build/img/manique_costura.jpg')">
+                <h2 class="swiper-title">Buenos Acabados</h2>
+                <p class="swiper-description"> Nos aseguramos de que tu mercadería tenga el mejor acabado, revisamos cuidadosamente cada prenda antes de la entrega.</p>
+                <div class="swiper-buttons">
+                    <a href="#contacto" class="button white">Cotiza ahora</a>
+                    <a href="#servicios" class="button white">Ver Servicios</a>
+                </div>
+                             
+            </div>
+            <div class="swiper-slide" style="background:linear-gradient(rgba(15,15,15,0.80), rgba(15,15,15,0.80)), url('build/img/Mascarilla_de_Tela.jpg')">
+                <h2 class="swiper-title">Mascarillas de tela</h2>
+                <p class="swiper-description"> Confeccionamos mascarillas personalizadas para empresas o negocios emprendedores, consúltanos hoy.</p>
+                <div class="swiper-buttons">
+                    <a href="#contacto" class="button white">Cotiza ahora</a>
+                    <a href="#servicios" class="button white">Ver Servicios</a>
+                </div>
+                             
             </div>
         </div>
-   </header><!-- Header -->
-
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+   
    <!-- Nosotros -->
    <section class="nosotros" id="nosotros">
     <div class="nosotros__container container">
@@ -111,6 +194,7 @@
     <iframe class="ubicacion__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.9639919337674!2d-77.03477297773505!3d-12.045998521857257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8b5d5aa7eb1%3A0x16061e0b481e22aa!2sPlaza%20Mayor%20de%20Lima!5e0!3m2!1ses-419!2spe!4v1668307514332!5m2!1ses-419!2spe" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
    </section><!-- Ubicacion -->
 
+   <!-- Formulario -->
    <section class="contacto" id="contacto">
     <div class="contacto__contenedor container">
         <div class="contacto__formulario">
@@ -156,7 +240,20 @@
         
         </div>
     </div>
-   </section>
+   </section> <!-- Formulario -->
+
+   <!-- Footer -->
+   <footer class="footer">
+        <div class="footer__image-container">
+            <img src="build/img/asset 0.png" alt="">
+        </div>
+        <div class="footer__copyright">
+            <p>© 2022 Taller de Confecciones Perú<br>
+                Todos los derechos reservados <br>             
+                Política de Privacidad </p>
+        </div>
+   </footer> <!-- Footer -->
+
     <!-- JS -->
     <script src="/build/js/app.js"></script>
 </body>

@@ -306,6 +306,11 @@ template {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
 img {
   max-width: 100%;
 }
@@ -344,43 +349,32 @@ a {
   }
 }
 
-.header {
-  margin-bottom: 20px;
-  min-height: 70px;
+.primary-header {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+}
+
+.wrap {
+  height: 90px;
+  margin: 0 30px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  background-color: #000;
 }
-.header__container {
-  margin: 0 auto;
-  padding: 10px;
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.primary-navigation {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #fff;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-@media (min-width: 768px) {
-  .header__container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-.header__logo-container {
-  margin-bottom: 10px;
-}
-.header__links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-@media (min-width: 768px) {
-  .header__links {
-    flex-direction: row;
-    gap: 50px;
-  }
-}
+
 .header__link {
   font-family: Montserrat, sans-serif;
   text-transform: uppercase;
@@ -403,6 +397,55 @@ a {
   background-color: #f5ab35;
 }
 
+@media (max-width: 768px) {
+  .primary-header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+  }
+  .wrap {
+    justify-content: space-between;
+  }
+  .primary-navigation {
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2rem;
+    background-color: #f5ab35;
+    transform: translateX(100%);
+  }
+  .primary-navigation a {
+    color: #fff;
+    font-size: 1.3rem;
+  }
+  .primary-navigation[data-visible=true] {
+    transform: translateX(0);
+  }
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    background-color: transparent;
+    background-image: url("../img/icons8-menú.svg");
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(87deg) brightness(100%) contrast(119%);
+    background-repeat: no-repeat;
+    width: 3rem;
+    border: 0;
+    aspect-ratio: 1;
+    top: 20px;
+    right: 10px;
+  }
+  .sr-only {
+    display: none;
+  }
+  .botones-redes {
+    display: none;
+  }
+  .botones-redes .button {
+    background-color: #000;
+  }
+}
 @media (min-width: 992px) {
   .nosotros__container {
     display: grid;
@@ -698,6 +741,9 @@ a {
   }
 }
 
+.contacto {
+  margin-bottom: 30px;
+}
 @media (min-width: 768px) {
   .contacto__contenedor {
     display: grid;
@@ -761,12 +807,88 @@ a {
   border: 1px solid #ccc !important;
 }
 
+@media (min-width: 768px) {
+  .swiper {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+.swiper-slide {
+  padding: 100px 50px 100px 50px;
+  background-position: center center;
+  background-size: cover !important;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .swiper-slide {
+    padding: 50px;
+  }
+}
+
+.swiper-title {
+  font-family: Montserrat, sans-serif;
+  color: #f5ab35;
+  text-transform: uppercase;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  .swiper-title {
+    font-size: 6.5rem;
+    margin: 0 30rem;
+    margin-bottom: 50px;
+  }
+}
+
+.swiper-description {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .swiper-description {
+    margin-bottom: 50px;
+  }
+}
+
+.swiper-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.footer {
+  padding: 30px;
+  background-color: #282828;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer__image-container {
+  margin-bottom: 20px;
+}
+.footer__copyright {
+  font-family: Montserrat, sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #fff;
+}
+
 .button {
   font-family: Montserrat, sans-serif;
   font-size: 12px;
   line-height: 18px;
   padding: 8px 25px;
   border-radius: 30px;
+  text-align: center;
   font-weight: 500;
   text-transform: uppercase;
   color: #707070;
@@ -775,6 +897,11 @@ a {
 }
 .button:hover {
   opacity: 0.7;
+}
+
+.button.white {
+  color: #ffffff !important;
+  border: 2px solid #ffffff;
 }
 
 .button.submit {

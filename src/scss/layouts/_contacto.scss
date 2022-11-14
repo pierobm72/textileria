@@ -1,6 +1,7 @@
 @use 'base' as *;
 
 .contacto {
+    margin-bottom: 30px;
     &__contenedor {
         @include medium {
             @include grid(2, 10px)

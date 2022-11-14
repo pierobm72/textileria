@@ -6,6 +6,7 @@
     line-height: 18px;
     padding: 8px 25px;
     border-radius: 30px;
+    text-align: center;
     font-weight: 500;
     text-transform: uppercase;
     color: $color-secondary;
@@ -15,6 +16,11 @@
    &:hover {
     opacity: .7;
    }
+}
+
+.button.white {
+    color: #ffffff !important;
+    border: 2px solid #ffffff;
 }
 
 

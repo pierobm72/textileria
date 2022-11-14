@@ -1,0 +1,64 @@
+@use 'base' as *;
+.swiper {
+
+  @include medium {
+    width: 100%;
+    height: 100vh;
+  }
+   
+}
+
+
+.swiper-slide {   
+ 
+    padding: 100px 50px 100px 50px;
+    background-position: center center;
+    background-size: cover !important;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+
+    @include medium {
+      padding: 50px;
+    }
+} 
+
+
+
+.swiper-title {
+  
+    font-family: $font-secondary;
+    color: $color-primary;
+    text-transform: uppercase;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    @include large {
+      font-size: 6.5rem;
+      margin: 0 30rem;
+      margin-bottom: 50px;
+   }
+}
+
+.swiper-description {
+    font-family: $font-primary;
+    line-height: 1.5;
+    color: $color-white;   
+    text-align: center;
+    margin-bottom: 20px;
+  
+
+    @include medium {
+       margin-bottom: 50px;
+    }
+    
+}
+
+.swiper-buttons {
+   display: flex;
+   gap: 20px;
+}
+
